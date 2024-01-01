@@ -1,8 +1,7 @@
-const setLanguage = (payload) => {
+const updateCart = (payload) => {
   return (dispatch) => {
-    console.log('inSet');
-    dispatch({type: 'Home/language', payload});
+    dispatch({type: 'Auth/cart', payload});
   };
 };
 
-export {setLanguage};
+export {updateCart};

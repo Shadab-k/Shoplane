@@ -5,15 +5,18 @@ const initialState = {
   token:""
 };
 
-const HomeSlice = createSlice({
-  name: 'Home',
+const AuthSlice = createSlice({
+  name: 'Auth',
   initialState,
   reducers: {
     cart: (state, action) => {
-      console.log('inreducer');
       const {payload} = action;
-      state.language = payload;
+      state.cart = payload;
+    },
+    token: (state, action) => {
+      const {payload} = action;
+      state.token = payload;
     },
   },
 });
-export default HomeSlice.reducer;
+export default AuthSlice.reducer;

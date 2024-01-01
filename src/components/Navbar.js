@@ -1,11 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Navbar.css"
 import { RiSearchLine } from 'react-icons/ri';
 import { FaShoppingCart } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 import { Link, NavLink } from 'react-router-dom'
+import { useSelector } from 'react-redux';
 
 const Navbar = () => {
+    const {cart}=useSelector(state=>state.AuthReducer)
+    const [totalCartItems,setTotalCartItems]=useState(0)
+
+    useEffect(()=>{
+        let count=0
+        cart.map((item)=>{
+            count+=item.count
+        })
+        setTotalCartItems(count)
+    },[cart])
     return (
 
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -29,14 +40,14 @@ const Navbar = () => {
 
                         </ul>
 
-                        <form class="d-flex " role="search">
-                            <input class="form-control " type="search" placeholder="Search" aria-label="Search" />
-                            <button class="btn" type="submit"> <RiSearchLine /></button>
+                        <form className="d-flex " role="search">
+                            <input className="form-control " type="search" placeholder="Search" aria-label="Search" />
+                            <button className="btn" type="submit"> <RiSearchLine /></button>
                         </form>
                         {/* <NavLink className="nav-link active" to="/Accessories"> <RiSearchLine /></NavLink> */}
 
                         <p className="nav-item my-3 mx-5">
-                            <NavLink className="nav-link active" to="/Accessories"> <FaShoppingCart /></NavLink>
+                            <NavLink className="nav-link active" to="/Accessories"> <FaShoppingCart/>{totalCartItems!==0&&<p style={{height:20,width:20,fontSize:15,position:"absolute"}}>{totalCartItems}</p>}</NavLink>
                         </p>
                         <p className="nav-item my-3 mx-5">
                             <NavLink className="nav-link active" to="/Accessories"><CgProfile /></NavLink>
