@@ -5,18 +5,17 @@ const initialState = {
   token:""
 };
 
-const AuthSlice = createSlice({
-  name: 'Auth',
-  initialState,
-  reducers: {
-    cart: (state, action) => {
-      const {payload} = action;
-      state.cart = payload;
-    },
-    token: (state, action) => {
-      const {payload} = action;
-      state.token = payload;
-    },
-  },
-});
-export default AuthSlice.reducer;
+const AuthReducer = (
+  state = initialState,
+  action
+) => {
+  const {type, payload} = action;
+  switch (type) {
+    case 'Update':
+      return {...state, ...payload};
+    default:
+      return state;
+  }
+};
+
+export default  AuthReducer

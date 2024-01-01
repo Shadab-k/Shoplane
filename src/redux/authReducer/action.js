@@ -1,6 +1,9 @@
-const updateCart = (payload) => {
+const updateCart = (action) => {
+  let payload={
+    cart:action
+  }
   return (dispatch) => {
-    dispatch({type: 'Auth/cart', payload});
+    dispatch({type: 'Update', payload});
   };
 };
 
