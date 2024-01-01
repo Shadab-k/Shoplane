@@ -1,0 +1,11 @@
+
+
+.text-style-heading {
+     /* font-family: 'Libre Baskerville', serif; */
+    /* font-family: 'Roboto', sans-serif;  */
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1.7rem;
+  }
+  .heading{
+    color: rgb(25, 181, 181);
+  }

@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.text-style {
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Source Code Pro', monospace;
+    font-family: 'Work Sans', sans-serif;
+    /* font-size: 2rem; */
+  }
+
+  .head2{
+    font-size: 1.5rem;
+  }
