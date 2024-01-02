@@ -1,3 +1,9 @@
+![image](https://github.com/Shadab-k/Shoplane/assets/85173679/f450a0e0-2a09-42b7-9178-acb146308c25)
+
+![image](https://github.com/Shadab-k/Shoplane/assets/85173679/b08ab968-d06b-4250-b748-fe10fe8eda1f)
+
+![image](https://github.com/Shadab-k/Shoplane/assets/85173679/37e23695-b4a5-40c4-81e9-1e15dfecddbe)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
