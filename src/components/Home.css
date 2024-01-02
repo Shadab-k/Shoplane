@@ -1,16 +1,39 @@
-*{
-    margin: 0;
-    padding: 0;
-}
 
 .text-style {
-    font-family: 'Libre Baskerville', serif;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Source Code Pro', monospace;
-    font-family: 'Work Sans', sans-serif;
-    /* font-size: 2rem; */
-  }
+  font-family: 'Libre Baskerville', serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Source Code Pro', monospace;
+  font-family: 'Work Sans', sans-serif;
+  /* font-size: 2rem; */
+}
 
-  .head2{
-    font-size: 1.5rem;
-  }
+.head2{
+  font-size: 1.5rem;
+}
+
+.cart-number-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 1rem 1rem;
+  height: 38px;
+  width: 112px;
+  border: 2px solid blue;
+  border-radius: 0.4rem;
+  margin-left: 1rem;
+}
+
+.increment-decrement-icons{
+  user-select: none;
+  height: 1rem;
+  width: 1rem;
+}
+
+.cart-item-count{
+  user-select: none;
+  font-size: 1rem;
+  align-self: center;
+  color: rgb(49, 49, 49);
+  margin-bottom: 0;
+}

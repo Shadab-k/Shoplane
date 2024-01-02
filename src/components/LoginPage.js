@@ -1,74 +1,72 @@
-import React from 'react'
+import React from "react";
+import { Link } from "react-router-dom";
 
 const LoginPage = () => {
-    return (
-        <>
-            <form className="row g-3">
-                <div className="col-md-4">
-                    <label for="validationServer01" className="form-label">First name</label>
-                    <input type="text" className="form-control is-valid" id="validationServer01" value="Mark" required />
-                    <div className="valid-feedback">
-                        Looks good!
-                    </div>
-                </div>
-                <div className="col-md-4">
-                    <label for="validationServer02" className="form-label">Last name</label>
-                    <input type="text" className="form-control is-valid" id="validationServer02" value="Otto" required />
-                    <div className="valid-feedback">
-                        Looks good!
-                    </div>
-                </div>
-                <div className="col-md-4">
-                    <label for="validationServerUsername" className="form-label">Username</label>
-                    <div className="input-group has-validation">
-                        <span className="input-group-text" id="inputGroupPrepend3">@</span>
-                        <input type="text" className="form-control is-invalid" id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required />
-                        <div id="validationServerUsernameFeedback" className="invalid-feedback">
-                            Please choose a username.
-                        </div>
-                    </div>
-                </div>
-                <div className="col-md-6">
-                    <label for="validationServer03" className="form-label">City</label>
-                    <input type="text" className="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required />
-                    <div id="validationServer03Feedback" className="invalid-feedback">
-                        Please provide a valid city.
-                    </div>
-                </div>
-                <div className="col-md-3">
-                    <label for="validationServer04" className="form-label">State</label>
-                    <select className="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
-                        <option selected disabled value="">Choose...</option>
-                        <option>...</option>
-                    </select>
-                    <div id="validationServer04Feedback" className="invalid-feedback">
-                        Please select a valid state.
-                    </div>
-                </div>
-                <div className="col-md-3">
-                    <label for="validationServer05" className="form-label">Zip</label>
-                    <input type="text" className="form-control is-invalid" id="validationServer05" aria-describedby="validationServer05Feedback" required />
-                    <div id="validationServer05Feedback" className="invalid-feedback">
-                        Please provide a valid zip.
-                    </div>
-                </div>
-                <div className="col-12">
-                    <div className="form-check">
-                        <input className="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required />
-                        <label className="form-check-label" for="invalidCheck3">
-                            Agree to terms and conditions
-                        </label>
-                        <div id="invalidCheck3Feedback" className="invalid-feedback">
-                            You must agree before submitting.
-                        </div>
-                    </div>
-                </div>
-                <div className="col-12">
-                    <button className="btn btn-primary" type="submit">Submit form</button>
-                </div>
-            </form>
-        </>
-    )
-}
+  return (
+    <div className="container d-flex justify-content-center align-items-center vh-100">
+      <form style={{ width: "50%", margin: "auto" }}>
+        <div className="text-center mb-3">
+          <Link to="/login" className="me-3">
+            <button
+              style={{ borderRadius: "10rem" }}
+              type="button"
+              className="btn btn-success btn-lg"
+            >
+              Login
+            </button>
+          </Link>
+          <Link to="/signup">
+            <button
+              style={{ borderRadius: "10rem" }}
+              type="button"
+              className="btn btn-success btn-lg"
+            >
+              SignUp
+            </button>
+          </Link>
+        </div>
+        <div className="mb-3">
+          <label htmlFor="exampleInputEmail1" className="form-label">
+            Email address
+          </label>
+          <input
+            type="email"
+            className="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+          />
+          <div id="emailHelp" className="form-text">
+            We'll never share your email with anyone else.
+          </div>
+        </div>
+        <div className="mb-3">
+          <label htmlFor="exampleInputPassword1" className="form-label">
+            Password
+          </label>
+          <input
+            type="password"
+            className="form-control"
+            id="exampleInputPassword1"
+          />
+        </div>
+        <div className="mb-3 form-check">
+          <input
+            type="checkbox"
+            className="form-check-input"
+            id="exampleCheck1"
+          />
+          <label className="form-check-label" htmlFor="exampleCheck1">
+            Check me out
+          </label>
+        </div>
+        <div className="text-center">
+          <button type="submit" className="btn btn-primary">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  );
+};
 
-export default LoginPage
+export default LoginPage;
